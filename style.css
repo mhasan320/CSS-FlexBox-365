@@ -1,0 +1,171 @@
+:root{
+    --gradient1:linear-gradient(to right top, #fc3669, #ff0c83, #ff00a1, #f600c5, #de12eb);
+    --gradient2:linear-gradient(to right top, #de12eb, #b840f5, #8f54f9, #5f60f9, #0068f3);
+    --gradient3:linear-gradient(to bottom, #3a1dcd, #371fc7, #3420c1, #3121ba, #2e22b4, #2924ad, #2425a7, #2026a0, #192897, #14298d, #112983, #102979);;
+ }
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ 
+ *{
+     margin:0;
+     padding:0;
+ }
+ a{
+     text-decoration: none;
+     color:#000;
+ }
+ body{
+     font-family: 'Poppins', sans-serif;
+     font-size: 1em;
+     line-height: 1;
+     color:#000;
+     text-transform: uppercase;
+ }
+ 
+ .card-5, .card-7{
+     text-transform: capitalize;
+ }
+ 
+ /*-- End: default css --*/
+ 
+ /*-- Start: Flexbox css --*/
+ .wrapper {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -ms-flex-wrap: wrap;
+         flex-wrap: wrap;
+     -webkit-box-flex: 1;
+         -ms-flex-positive: 1;
+             flex-grow: 1;
+     width: 100%;
+     max-width: 1200px;
+     -webkit-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+     margin: 0 auto;
+     height: 100vh;
+     -ms-flex-line-pack: center;
+         align-content: center;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+ }
+ .card-1,
+ .card-4,
+ .card-10 {
+     -ms-flex-preferred-size: 50%;
+         flex-basis: 50%;
+     font-size: 1.6em;
+     font-weight: bold;
+ }
+ .card-2{
+     -ms-flex-preferred-size: 34%;
+         flex-basis: 34%;
+ }
+ .card-3,
+ .card-8,
+ .card-9{
+     -ms-flex-preferred-size: 27%;
+         flex-basis: 27%;
+ }
+ .card-5,
+ .card-6{
+     -ms-flex-preferred-size: 100%;
+         flex-basis: 100%;
+     text-align: center;
+ }
+ .card-6{
+     font-size: 5em;
+     line-height: 1;
+     font-weight: 900;
+ }
+ .card-7 {
+     -ms-flex-preferred-size: 60%;
+         flex-basis: 60%;
+     font-size: 1.6em;
+     font-weight: bold;
+ }
+ /*-- End: Flexbox css --*/
+ /*--Start: gradient underline --*/
+ 
+ .card-7 a{
+     position: relative;
+ }
+ .card-7 a:after {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: 8px;
+     width: calc(100% + 7px );
+     background: #a3a3f4;
+     height: 7px;
+     border-radius: 5px;
+     -webkit-transform: rotate(-3deg);
+         -ms-transform: rotate(-3deg);
+             transform: rotate(-3deg);
+     z-index: -1;
+     -webkit-transition: all .3s ease-in-out;
+     -o-transition: all .3s ease-in-out;
+     transition: all .3s ease-in-out;
+ }
+ .card-7 a:hover:after{
+     height: 20px;
+ }
+ /*-- End: gradient underline --*/
+ 
+ .card-10{
+     text-align: right;
+     font-weight: normal;
+     font-size: 1.3em;
+ }
+ 
+ /*-- Start: text color --*/
+ 
+ .card-1{
+   background: var(--gradient1);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+ }
+ .card-4{
+     background: var(--gradient2);
+     -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+ }
+ .card-6{
+     background: var(--gradient3);
+     -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+ }
+ 
+ /*-- End: text color --*/
+ 
+ /* -- Start: desktop and tablet design */
+ 
+ @media( min-width: 767px ){
+     body{
+         font-size: 2em;
+     }
+     .card-1,
+     .card-4{
+         font-size: 3em;
+     }
+     .card-6{
+         font-size: 10em;
+         line-height: .9;
+     }
+     .card-7 a:after{
+         bottom:17px;
+         
+     }
+     .card-10{
+         font-size: .745em;
+     }
+ }
+ 
+ @media (max-width: 1200px) and (min-width:767px){
+     .card-1{
+         -ms-flex-preferred-size: 100%;
+             flex-basis: 100%;
+     }
+ }
